@@ -1,0 +1,3 @@
+<div *ngIf="icons" class="row">
+  <app-icon class="col s4 m3 l2" *ngFor="let icon of getIcons(); let i = index" [icon]="icon" (click)="onIconSelected(icon, i)"></app-icon>
+</div>

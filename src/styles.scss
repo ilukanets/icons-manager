@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  font: normal normal 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  min-width: 320px;
+  margin: 0 auto;
+}

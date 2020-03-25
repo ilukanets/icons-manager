@@ -1,0 +1,14 @@
+<div>
+  <div *ngIf="icon; else noIcon">
+    <div>
+      <img width="100" height="100" src="{{ getImageUrl() }}" alt="{{ icon.name }}">
+    </div>
+    <div class="name">{{ icon.name }}</div>
+    <div>
+      <code [innerText]="getIconCode()"></code>
+    </div>
+  </div>
+</div>
+<ng-template #noIcon>
+  <p class="empty">No icon selected</p>
+</ng-template>

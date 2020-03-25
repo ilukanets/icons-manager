@@ -1,0 +1,12 @@
+<app-icon-info [icon]="icon"></app-icon-info>
+<div class="search-wrapper">
+  <div class="container">
+    <i class="material-icons md-search"></i><input type="text" id="search" placeholder="Search icons"
+                                                   [(ngModel)]="search">
+  </div>
+</div>
+<div class="content">
+  <div class="container">
+    <app-icons-list (selectedIcon)="icon = $event" [search]="search"></app-icons-list>
+  </div>
+</div>
