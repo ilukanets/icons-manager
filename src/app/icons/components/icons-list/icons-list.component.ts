@@ -8,6 +8,7 @@ import {IconsService} from '../../icons.service';
 })
 export class IconsListComponent implements OnInit {
   icons: any[];
+  selectedIconName: string;
 
   @Input() search: string;
   @Output() selectedIcon: EventEmitter<any> = new EventEmitter<any>();
@@ -33,8 +34,12 @@ export class IconsListComponent implements OnInit {
     });
   }
 
-  onIconSelected(icon, index) {
-    console.log(index);
+  onIconSelected(icon) {
+    if (this.selectedIconName === icon.name) {
+      icon = null;
+    }
+
+    this.selectedIconName = icon ? icon.name : null;
     this.selectedIcon.emit(icon);
   }
 }
