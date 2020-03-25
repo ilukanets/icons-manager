@@ -1,6 +1,13 @@
 :host {
   text-align: center;
   background-color: #f0f3f7;
+  border-right: 1px dashed #c0c4c7;
+}
+
+h1 {
+  border-bottom: 1px dashed #c0c4c7;
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
 }
 
 img {
