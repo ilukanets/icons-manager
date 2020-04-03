@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconsComponent implements OnInit {
   search = '';
+  type = 'outline';
 
   icon: any = null;
 

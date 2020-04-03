@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {BehaviorSubject, Observable} from 'rxjs';
+import {BehaviorSubject} from 'rxjs';
+import {environment} from '../../environments/environment';
 
-const DATA_URL = 'https://raw.githubusercontent.com/material-icons/material-icons-font/master/data.json';
+const DATA_URL = environment.serverUrl + 'data.json';
 
 @Injectable({providedIn: 'root'})
 export class IconsService {

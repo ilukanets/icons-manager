@@ -22,3 +22,15 @@ body {
   min-width: 320px;
   margin: 0 auto;
 }
+
+.clearfix {
+  &:before,
+  &:after {
+    display: block;
+  }
+
+  &:after {
+    content: '';
+    clear: both;
+  }
+}

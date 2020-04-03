@@ -1,4 +1,4 @@
 <div *ngIf="icon" [class.selected]="selected" [title]="icon.name">
-  <span class="icon material-icons-outline md-{{ icon.name }}"></span>
+  <span  [class.material-icons]="type == 'baseline'" class="icon material-icons-{{type}} md-{{ icon.name }}"></span>
   <div class="name">{{ icon.name }}</div>
 </div>

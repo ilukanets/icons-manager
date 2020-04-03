@@ -1,12 +1,19 @@
 <app-icon-info [icon]="icon"></app-icon-info>
 <div class="search-wrapper">
-  <div class="container">
-    <i class="material-icons md-search"></i><input type="text" id="search" placeholder="Search icons"
-                                                   [(ngModel)]="search">
+  <div class="container clearfix">
+    <i class="material-icons md-search"></i>
+    <input type="text" id="search" placeholder="Search icons" [(ngModel)]="search">
+    <select name="type" id="type" [(ngModel)]="type">
+      <option value="baseline">Baseline</option>
+      <option value="outline">Outline</option>
+      <option value="round">Round</option>
+      <option value="twotone">Two tone</option>
+      <option value="sharp">Sharp</option>
+    </select>
   </div>
 </div>
 <div class="content">
   <div class="container">
-    <app-icons-list (selectedIcon)="icon = $event" [search]="search"></app-icons-list>
+    <app-icons-list (selectedIcon)="icon = $event" [search]="search" [type]="type"></app-icons-list>
   </div>
 </div>

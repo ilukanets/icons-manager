@@ -7,6 +7,7 @@ import {IconsService} from '../../icons.service';
   styleUrls: ['./icons-list.component.scss']
 })
 export class IconsListComponent implements OnInit {
+  @Input() type;
   icons: any[];
   selectedIconName: string;
 
@@ -18,7 +19,6 @@ export class IconsListComponent implements OnInit {
   ngOnInit(): void {
     this.iconsService.icons.subscribe(
       (icons: any[]) => {
-        console.log(icons);
         this.icons = icons;
       }
     );
@@ -30,7 +30,13 @@ export class IconsListComponent implements OnInit {
     }
 
     return this.icons.filter(icon => {
-      return icon.name.indexOf(this.search) !== -1;
+      let name = icon.name;
+
+      if (icon.tags) {
+        name += ',' + icon.tags.join(',');
+      }
+
+      return name.indexOf(this.search) !== -1;
     });
   }
 

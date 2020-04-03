@@ -35,19 +35,35 @@ app-icons-list {
     margin-right: -2.5rem;
     text-align: center;
   }
+
+  select {
+    float: left;
+    width: 20%;
+    padding: .75em 2.5rem;
+    line-height: 1;
+    height: 2.5rem;
+    font-size: inherit;
+    border: 0 none;
+    border-bottom: 2px solid #c4c6c8;
+    border-radius: 0;
+    outline: 0 none;
+    box-sizing: border-box;
+  }
 }
 
 #search {
   appearance: none;
   -webkit-appearance: none;
   display: block;
-  width: 100%;
+  width: 75%;
   padding: .75em 2.5rem;
   line-height: 1;
   font-size: inherit;
   border: 0 none;
   border-bottom: 2px solid #c4c6c8;
   outline: 0 none;
+  float: left;
+  margin-right: 5%;
 
   &:focus {
     border-bottom-color: #3a44ab;

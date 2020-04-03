@@ -1,4 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {environment} from '../../../../environments/environment';
+
+const serverUrl = environment.serverUrl;
 
 @Component({
   selector: 'app-icon-info',
@@ -13,7 +16,7 @@ export class IconInfoComponent implements OnInit {
   ngOnInit(): void {}
 
   getImageUrl() {
-    return `https://material-icons.github.io/material-icons/svg/${this.icon.name}/outline.svg`;
+    return `${serverUrl}icons/outline/${this.icon.name}.svg`;
   }
 
   getIconCode() {
