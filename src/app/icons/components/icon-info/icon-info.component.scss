@@ -2,6 +2,23 @@
   text-align: center;
   background-color: #f0f3f7;
   border-right: 1px dashed #c0c4c7;
+  overflow-y: auto;
+}
+
+.download-link {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #49ab47;
+  text-decoration: none;
+  outline: none;
+  margin: .25em auto;
+  padding: .5em .75em;
+  line-height: 1.5;
+  border-radius: .25em;
+
+  .material-icons {
+    vertical-align: middle;
+  }
 }
 
 h1 {
