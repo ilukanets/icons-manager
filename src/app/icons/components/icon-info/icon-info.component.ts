@@ -10,13 +10,14 @@ const serverUrl = environment.serverUrl;
 })
 export class IconInfoComponent implements OnInit {
   @Input() icon: any;
+  @Input() type: string;
 
   constructor() { }
 
   ngOnInit(): void {}
 
   getImageUrl() {
-    return `${serverUrl}icons/outline/${this.icon.name}.svg`;
+    return `${serverUrl}icons/${this.type}/${this.icon.name}.svg`;
   }
 
   getIconCode() {
