@@ -18,3 +18,19 @@ img {
   background-color: #ffffff;
   border: 1px dashed #c0c4c7;
 }
+
+.tags {
+  h4 {
+    margin: 1.5em 0 0;
+  }
+}
+
+.tag {
+  display: inline-block;
+  margin: .25em;
+  padding: .5em;
+  line-height: 1;
+  border-radius: .25em;
+  background-color: #ffffff;
+  border: 1px dashed #a0aaab;
+}
