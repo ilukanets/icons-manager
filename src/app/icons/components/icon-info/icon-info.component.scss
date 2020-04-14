@@ -11,7 +11,7 @@
   background-color: #49ab47;
   text-decoration: none;
   outline: none;
-  margin: .25em auto;
+  margin: 1.5em auto;
   padding: .5em .75em;
   line-height: 1.5;
   border-radius: .25em;
@@ -30,10 +30,25 @@ h1 {
   color: #3a44ab;
 }
 
+h3 {
+  cursor: copy;
+}
+
 img {
-  vertical-align: baseline;
-  background-color: #ffffff;
-  border: 1px dashed #c0c4c7;
+  display: block;
+  margin: 0 auto;
+}
+
+code {
+  display: block;
+  text-align: left;
+  cursor: copy;
+  max-width: 100%;
+  padding: 1em .5em;
+  border: 1px solid #a0aaab;
+  border-radius: .25em;
+  background-color: #f8fafb;
+  color: #9a2154;
 }
 
 .tags {

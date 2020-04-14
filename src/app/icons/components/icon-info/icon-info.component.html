@@ -1,16 +1,14 @@
 <div>
   <h1>Material icons</h1>
   <div *ngIf="icon; else noIcon">
-    <h3 class="name">{{ icon.name }}</h3>
+    <h3 title="Click to copy" class="name" (mouseup)="copyContent(icon.name)" #name>{{ icon.name }}</h3>
     <div>
       <img width="200" height="200" src="{{ getImageUrl() }}" alt="{{ icon.name }}">
     </div>
     <div>
       <a class="download-link" href="{{ getImageUrl() }}" download><i class="material-icons md-save_alt"></i> Download SVG</a>
     </div>
-    <div>
-      <code [innerText]="getIconCode()"></code>
-    </div>
+    <code title="Click to copy" (click)="copyContent(getIconCode())" [innerText]="getIconCode()"></code>
     <div class="tags" *ngIf="icon?.tags.length">
       <h4>Tags:</h4>
       <span class="tag" *ngFor="let tag of icon.tags">{{ tag }}</span>
