@@ -1,0 +1,10 @@
+<app-layout *ngIf="iconsLoaded | async; else loading">
+  <app-layout-sidebar>
+    <app-icons-filter></app-icons-filter>
+    <app-selected-icon-info></app-selected-icon-info>
+  </app-layout-sidebar>
+  <app-layout-content>
+    <app-icons-list></app-icons-list>
+  </app-layout-content>
+</app-layout>
+<ng-template #loading>Loading</ng-template>

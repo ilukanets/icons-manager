@@ -1,0 +1,66 @@
+:host {
+  text-align: center;
+}
+
+.btn {
+  .material-icons {
+    vertical-align: middle;
+  }
+}
+
+h5 {
+  cursor: copy;
+  margin-bottom: 1.5rem;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  box-shadow: inset 0 0 5px rgba(0,0,0,.15);
+  background-image: linear-gradient(45deg, #e0e0e0 25%, transparent 25%),linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),linear-gradient(45deg, transparent 75%, #e0e0e0 75%),linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.code {
+  position: relative;
+
+  code {
+    display: block;
+    max-width: 100%;
+    padding: .75rem .5rem;
+    border-radius: .25rem;
+    text-align: left;
+    cursor: copy;
+    white-space: nowrap;
+    background: #dee2e6;
+    overflow-x: auto;
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: .75rem;
+  }
+
+  &:after {
+    border-radius: 0 .25rem .25rem 0;
+    right: 0;
+    background: linear-gradient(to left, #dee2e6, rgba(0, 0, 0, 0));
+  }
+
+  &:before {
+    border-radius: .25rem 0 0 .25rem;
+    left: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), #dee2e6);
+  }
+}
+
+.tags {
+  h4 {
+    margin: 1.5em 0 0;
+  }
+}

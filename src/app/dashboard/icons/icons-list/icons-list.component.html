@@ -1,0 +1,11 @@
+<div *ngIf="icons?.length && categories?.length">
+  <div *ngFor="let category of categories">
+    <app-icons-list-category [categoryName]="category" *ngIf="(icons | iconsFilter:category:search).length">
+      <div class="row no-gutters">
+        <div *ngFor="let icon of icons | iconsFilter:category:search" class="col-xs-3 col-lg-2 col-xl-1">
+          <app-icons-list-item [icon]="icon" [type]="type"></app-icons-list-item>
+        </div>
+      </div>
+    </app-icons-list-category>
+  </div>
+</div>

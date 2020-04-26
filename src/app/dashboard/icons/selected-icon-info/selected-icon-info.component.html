@@ -1,0 +1,24 @@
+<div>
+  <div *ngIf="icon">
+    <h5 title="Click to copy" class="name text-truncate" (mouseup)="copyContent(icon.name)" #name>{{ icon.name }}</h5>
+    <div>
+      <img width="100" height="100" src="{{ getImageUrl() }}" alt="{{ icon.name }}">
+    </div>
+    <div class="py-3">
+      <a class="btn btn-primary" target="_blank" href="{{ getImageUrl() }}" download><i
+        class="material-icons md-save_alt"></i> Download SVG</a>
+    </div>
+    <div class="code">
+      <code class="small"
+            title="Click to copy"
+            (click)="copyContent(getIconCode())"
+            [innerText]="getIconCode()"></code>
+    </div>
+    <div class="tags" *ngIf="icon?.tags.length">
+      <h4>Tags:</h4>
+      <span *ngFor="let tag of icon.tags" class="d-inline-block m-1">
+        <button class="tag btn btn-outline-secondary btn-sm" (click)="onSelectTag(tag)">{{ tag }}</button>
+      </span>
+    </div>
+  </div>
+</div>

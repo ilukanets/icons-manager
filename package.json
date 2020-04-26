@@ -1,6 +1,6 @@
 {
   "name": "icons-manager",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "node server/server.js",
@@ -24,9 +24,11 @@
     "@angular/router": "^9.0.7",
     "@material-icons/font": "^1.0.0",
     "@material-icons/svg": "^1.0.0",
+    "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
     "express": "^4.17.1",
     "materialize-css": "^1.0.0-rc.2",
+    "ngx-bootstrap": "^5.6.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "typescript": "~3.7.5",

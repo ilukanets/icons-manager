@@ -1,0 +1,18 @@
+<form class="mb-3 border-bottom" *ngIf="types?.length">
+  <div class="form-group">
+    <label class="sr-only" for="search">Search</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text"><i class="material-icons md-search" aria-hidden="true"></i></div>
+      </div>
+      <input type="text" class="form-control" id="search" name="search" placeholder="Search" [(ngModel)]="search"
+             (input)="onSearch()">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="types">Icons type</label>
+    <select id="types" class="form-control" name="type" [(ngModel)]="type" (change)="onTypeChange()">
+      <option *ngFor="let type of types" value="{{type}}">{{ type | titlecase }}</option>
+    </select>
+  </div>
+</form>
