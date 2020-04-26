@@ -7,6 +7,7 @@ import { IconsListCategoryComponent } from './icons-list/icons-list-category/ico
 import { IconsFilterPipe } from './icons-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { SelectedIconInfoComponent } from './selected-icon-info/selected-icon-info.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SelectedIconInfoComponent } from './selected-icon-info/selected-icon-in
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   exports: [
     IconsFilterComponent,

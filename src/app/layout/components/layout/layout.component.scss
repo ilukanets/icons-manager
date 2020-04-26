@@ -25,7 +25,11 @@ app-layout-sidebar {
   overflow-y: auto;
 
   & + app-layout-content {
-    left: 300px;
+    left: 310px;
+
+    @media all and (min-width: 1620px) {
+      padding-right: 310px;
+    }
   }
 }
 

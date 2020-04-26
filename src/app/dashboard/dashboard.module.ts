@@ -6,6 +6,7 @@ import { IconsModule } from './icons/icons.module';
 
 import { DashboardComponent } from './dashboard.component';
 import { LayoutModule } from '../layout/layout.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LayoutModule } from '../layout/layout.module';
     CommonModule,
     IconsModule,
     RouterModule,
-    LayoutModule
+    LayoutModule,
+    SharedModule
   ],
   exports: [
     IconsModule

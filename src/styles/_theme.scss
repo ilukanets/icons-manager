@@ -1,1 +1,11 @@
-$body-bg: $gray-100;
+
+
+$primary: #028090;
+$secondary: #33415c;
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary
+);
+
+$body-bg: $gray-200;
+
