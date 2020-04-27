@@ -38,6 +38,24 @@ app.use((err, req, res, next) => {
   });
 });
 
+const generateIconImage = (data, type) => {
+  try {
+    const code = data.code[type] || data.code['baseline'];
+    let svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/>'
+
+    svg += code.transparent ? code.transparent.replace('/>', ' opacity=".3"/>') : '';
+    svg += code.opaque || '';
+    svg += '</svg>';
+
+    fs.writeFileSync(path.join(__dirname, 'public/icons', type, `${data.name}.svg`), svg, (err) => {
+      if (err) console.log(err);
+    });
+  }
+  catch (e) {
+    console.log(e);
+  }
+}
+
 const beforeStart = async (cb) => {
   try {
     const svgData = await fs.promises.readFile(path.join(__dirname, '../node_modules/@material-icons/svg/data.json'));
@@ -76,10 +94,8 @@ const beforeStart = async (cb) => {
         }
       };
 
-      data.types.forEach(async (type) => {
-        await fs.promises.copyFile(
-          path.join(__dirname, '../node_modules/@material-icons/svg/svg', icon.name, type + '.svg'),
-          path.join(__dirname, 'public/icons', type, icon.name + '.svg'));
+      data.types.forEach((type) => {
+        generateIconImage(fontData, type);
       });
 
       data.icons.push(icon);
