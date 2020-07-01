@@ -27,7 +27,11 @@ export class IconsFilterComponent implements OnInit {
     });
   }
 
-  onSearch() {
+  onSearch(clear: boolean = false) {
+    if (clear === true) {
+      this.search = '';
+    }
+
     this.iconsService.setSearch(this.search);
   }
 

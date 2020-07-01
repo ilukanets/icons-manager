@@ -7,6 +7,9 @@
       </div>
       <input type="text" class="form-control" id="search" name="search" placeholder="Search" [(ngModel)]="search"
              (input)="onSearch()">
+      <div class="input-group-append" *ngIf="search">
+        <div class="input-group-text clear-search" (click)="onSearch(true)"><i class="material-icons md-clear" aria-hidden="true"></i></div>
+      </div>
     </div>
   </div>
   <div class="form-group">
