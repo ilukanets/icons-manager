@@ -10,6 +10,7 @@
 
 h2 {
   cursor: copy;
+  font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
@@ -56,6 +57,21 @@ img {
     border-radius: .25rem 0 0 .25rem;
     left: 0;
     background: linear-gradient(to left, rgba(0, 0, 0, 0), #dee2e6);
+  }
+}
+
+.charcode {
+  dl {
+    text-align: left;
+  }
+
+  dt {
+    float: left;
+    width: 50%;
+  }
+
+  dd {
+    margin-left: 50%;
   }
 }
 

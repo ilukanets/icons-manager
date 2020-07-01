@@ -16,6 +16,20 @@
             (click)="copyContent(getIconCode())"
             [innerText]="getIconCode()"></code>
     </section>
+    <section class="charcode">
+      <dl>
+        <dt *ngIf="icon?.char.opaque">Opaque:</dt>
+        <dd *ngIf="icon?.char.opaque">
+          <span tooltip="Click to copy"
+                (click)="copyContent(icon.char.opaque)">{{ icon.char.opaque }}</span>
+        </dd>
+        <dt *ngIf="icon?.char.transparent">Transparent:</dt>
+        <dd *ngIf="icon?.char.transparent">
+          <span tooltip="Click to copy"
+                (click)="copyContent(icon.char.transparent)">{{ icon.char.transparent }}</span>
+        </dd>
+      </dl>
+    </section>
     <section class="tags" *ngIf="icon?.tags.length">
       <h5>Tags:</h5>
       <span *ngFor="let tag of icon.tags" class="d-inline-block m-1">
